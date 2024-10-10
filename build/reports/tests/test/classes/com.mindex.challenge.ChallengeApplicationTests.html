@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.003s</div>
+<div class="counter">1.182s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -79,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads</td>
-<td class="success">0.003s</td>
+<td class="success">1.182s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +90,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-10-10T14:17:03.194-04:00  INFO 4264 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.ChallengeApplicationTests]: ChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-10-10T14:17:03.206-04:00  INFO 4264 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.ChallengeApplicationTests
+<pre>14:32:20.030 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mindex.challenge.ChallengeApplicationTests]: ChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:32:20.211 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.ChallengeApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -98,21 +101,31 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.3)
 
-2024-10-10T14:17:03.268-04:00  INFO 4264 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Starting ChallengeApplicationTests using Java 21.0.3 with PID 4264 (started by Jordan in C:\Users\Jordan\Downloads\mindex-code-challenge\mindex-code-challenge)
-2024-10-10T14:17:03.268-04:00 DEBUG 4264 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Running with Spring Boot v3.2.3, Spring v6.1.4
-2024-10-10T14:17:03.268-04:00  INFO 4264 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-10-10T14:17:03.563-04:00  INFO 4264 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2024-10-10T14:17:03.574-04:00  INFO 4264 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 2 MongoDB repository interfaces.
-2024-10-10T14:17:03.731-04:00  INFO 4264 --- [    Test worker] de.bwaldvogel.mongo.MongoServer          : started MongoServer(port: 62879, ssl: false)
-2024-10-10T14:17:03.736-04:00  INFO 4264 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {&quot;driver&quot;: {&quot;name&quot;: &quot;mongo-java-driver|sync&quot;, &quot;version&quot;: &quot;4.11.1&quot;}, &quot;os&quot;: {&quot;type&quot;: &quot;Windows&quot;, &quot;name&quot;: &quot;Windows 10&quot;, &quot;architecture&quot;: &quot;amd64&quot;, &quot;version&quot;: &quot;10.0&quot;}, &quot;platform&quot;: &quot;Java/Oracle Corporation/21.0.3+7-LTS-152&quot;} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@6238d5e0, com.mongodb.Jep395RecordCodecProvider@336f49a1, com.mongodb.KotlinCodecProvider@2c8b8de0]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[kubernetes.docker.internal:62879], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2024-10-10T14:17:03.737-04:00  INFO 4264 --- [-server-worker1] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x42b2f2ef, L:/127.0.0.1:62879 - R:/127.0.0.1:62880] connected
-2024-10-10T14:17:03.737-04:00  INFO 4264 --- [-server-worker2] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x6ca61b37, L:/127.0.0.1:62879 - R:/127.0.0.1:62881] connected
-2024-10-10T14:17:03.743-04:00  INFO 4264 --- [.internal:62879] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=kubernetes.docker.internal:62879, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=5668100}
-2024-10-10T14:17:03.878-04:00  INFO 4264 --- [-server-worker3] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0xb463d57e, L:/127.0.0.1:62879 - R:/127.0.0.1:62882] connected
-2024-10-10T14:17:03.883-04:00  INFO 4264 --- [-server-worker3] d.b.mongo.backend.AbstractMongoBackend   : created database test
-2024-10-10T14:17:03.883-04:00  INFO 4264 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection employee
-2024-10-10T14:17:03.884-04:00  INFO 4264 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.employee
-2024-10-10T14:17:04.038-04:00  INFO 4264 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Started ChallengeApplicationTests in 0.821 seconds (process running for 9.021)
+2024-10-10T14:32:20.943-04:00  INFO 20072 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Starting ChallengeApplicationTests using Java 21.0.3 with PID 20072 (started by Jordan in C:\Users\Jordan\Downloads\mindex-code-challenge\mindex-code-challenge)
+2024-10-10T14:32:20.944-04:00 DEBUG 20072 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-10-10T14:32:20.945-04:00  INFO 20072 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-10-10T14:32:21.721-04:00  INFO 20072 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-10-10T14:32:21.798-04:00  INFO 20072 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 MongoDB repository interfaces.
+2024-10-10T14:32:22.865-04:00  INFO 20072 --- [    Test worker] de.bwaldvogel.mongo.MongoServer          : started MongoServer(port: 63488, ssl: false)
+2024-10-10T14:32:23.093-04:00  INFO 20072 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {&quot;driver&quot;: {&quot;name&quot;: &quot;mongo-java-driver|sync&quot;, &quot;version&quot;: &quot;4.11.1&quot;}, &quot;os&quot;: {&quot;type&quot;: &quot;Windows&quot;, &quot;name&quot;: &quot;Windows 10&quot;, &quot;architecture&quot;: &quot;amd64&quot;, &quot;version&quot;: &quot;10.0&quot;}, &quot;platform&quot;: &quot;Java/Oracle Corporation/21.0.3+7-LTS-152&quot;} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2d5a1588, com.mongodb.Jep395RecordCodecProvider@4f116ca2, com.mongodb.KotlinCodecProvider@125d47c4]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[kubernetes.docker.internal:63488], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-10-10T14:32:23.107-04:00  INFO 20072 --- [-server-worker1] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x2aa1aa67, L:/127.0.0.1:63488 - R:/127.0.0.1:63490] connected
+2024-10-10T14:32:23.107-04:00  INFO 20072 --- [-server-worker2] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0xeec2e70e, L:/127.0.0.1:63488 - R:/127.0.0.1:63489] connected
+2024-10-10T14:32:23.211-04:00  INFO 20072 --- [.internal:63488] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=kubernetes.docker.internal:63488, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=132332200}
+2024-10-10T14:32:24.067-04:00  INFO 20072 --- [-server-worker3] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x6ed563f9, L:/127.0.0.1:63488 - R:/127.0.0.1:63491] connected
+2024-10-10T14:32:24.126-04:00  INFO 20072 --- [-server-worker3] d.b.mongo.backend.AbstractMongoBackend   : created database test
+2024-10-10T14:32:24.136-04:00  INFO 20072 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection employee
+2024-10-10T14:32:24.144-04:00  INFO 20072 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.employee
+2024-10-10T14:32:24.951-04:00  INFO 20072 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Started ChallengeApplicationTests in 4.472 seconds (process running for 6.133)
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (C:\Users\Jordan\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.12\be4984cb6fd1ef1d11f218a648889dfda44b8a15\byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
 </pre>
 </span>
 </div>
@@ -124,7 +137,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.6</a> at Oct 10, 2024, 2:17:04 PM</p>
+<a href="http://www.gradle.org">Gradle 8.6</a> at Oct 10, 2024, 2:32:28 PM</p>
 </div>
 </div>
 </body>
